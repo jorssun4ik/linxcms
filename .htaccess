@@ -1,0 +1,81 @@
+RemoveType .php3 .phtml .php4 .php5 .cgi .pl
+
+AddType text/vnd.wap.wml;charset=utf-8 .wml
+AddType application/vnd.sonyericsson.mms-template tpl
+AddType application/vnd.wap.wmlc .wmlc
+AddType text/vnd.wap.wmlscript .wmls
+AddType application/vnd.wap.wmlscriptc .wmlsc
+AddType image/vnd.wap.wbmp .wbmp
+AddType application/vnd.eri.thm .thm 
+AddType application/vnd.mophun.application .mpn  
+AddType application/vnd.mophun.certificate .mpc
+AddType text/vnd.sun.j2me.app-descriptor;charset=UTF-8 .jad
+addtype text/x-vmel .mel
+addtype audio/imelody .imy
+AddType application/vnd.smaf .mmf
+addtype text/x-vmel .emy
+AddType audio/amr .amr
+AddType audio/x-wav .wav
+AddType application/x-tar .hid
+Addtype image/jpeg .jpg 
+Addtype image/jpeg .jpeg 
+Addtype image/gif .gif 
+Addtype image/png .png 
+Addtype image/bmp .bmp 
+Addtype text/x-imelody .imy 
+Addtype text/x-emelody .emy 
+Addtype text/x-vcard .vcf 
+Addtype text/x-vcalendar .vcs 
+Addtype text/calendar .ics 
+Addtype application/smil .smil 
+Addtype application/smil .smi 
+Addtype application/java-archive .jar 
+Addtype application/vnd.symbian.install .sis 
+Addtype audio/wav .wav 
+Addtype audio/midi .midi 
+Addtype audio/midi .mid 
+Addtype audio/rmf .rmf 
+Addtype application/vnd.wap.mms-message .mms 
+AddType video/mp4 .mp4
+Addtype video/3gpp .3gp
+
+php_value safe_mode_gid 1
+php_value safe_mode_include_dir 1
+php_value url_rewriter.tags On
+php_value register_globals Off
+php_value session.use_trans_sid On
+php_value magic_quotes_gpc Off
+php_value magic_quotes_runtime Off
+php_value magic_quotes_sybase Off
+php_value allow_url_fopen 0
+php_value date.timezone "Europe/Moscow"
+DirectoryIndex index.php
+AddDefaultCharset UTF-8
+Options -Indexes
+
+php_flag display_errors On
+
+# Для красоты
+RewriteEngine On 
+Options +FollowSymlinks 
+RewriteBase / 
+
+RewriteRule ^aut/?$  aut.php [QSA,L]
+RewriteRule ^registration/?$  registration.php [QSA,L]
+RewriteRule ^lostpass/?$  lostpass.php [QSA,L]
+RewriteRule ^online/?$  online_users.php [QSA,L]
+RewriteRule ^all/?$  all_users.php [QSA,L]
+RewriteRule ^aut/?$  aut.php [QSA,L]
+RewriteRule ^news/?$  news.php [QSA,L]
+RewriteRule ^last_news/?$  last_news.php [QSA,L]
+RewriteRule ^exit/?$  exit.php [QSA,L]
+RewriteRule ^settings/?$  settings.php [QSA,L]
+RewriteRule ^guest/?$  gb.php [QSA,L]
+RewriteRule ^guest/add/?$  gb.php?add [QSA,L]
+RewriteRule ^guest/([A-z0-9]*)/?$  gb.php?l=$1 [QSA,L]
+
+#RewriteRule ^new_t/?$  forum/new_t.php [QSA,L] 
+#RewriteRule ^new_t/([0-9]+)/?$  forum/new_t.php?f=$1 [QSA,L] 
+
+RewriteCond %{REQUEST_METHOD} ^TRACE
+RewriteRule .* - [F]
