@@ -1,0 +1,28 @@
+body{
+    background: #0059b7; 
+    font-size: 12px; 
+    color: #FFF;
+    }
+a { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFF; text-decoration: none }
+a:hover { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000; text-decoration: underline}
+.content { background: url(images/bg.gif) repeat-y left top; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; text-decoration: none; text-align: left; padding-left: 60px; padding-right: 60px; }
+.header{background: url(images/top.gif) no-repeat; height: 9px;}
+.lt{background: #022467 url(images/tl.gif) no-repeat left top; height: 39px; width: 453px;}
+.tmenu{background: #022467 url(images/menu.gif) no-repeat right top; height: 39px;}
+.topmenu{text-align: center; font-weight:bold;}
+.logoes{background: url(images/head2.jpg) no-repeat left top; height: 175px; width: 780px; padding-left: 330px; padding-right: 100px; padding-bottom: 10px; table-layout: auto;}
+.one{ font-size: 12px; color: #FFF; padding: 5px;}
+.c{ font-size: 10px; font-weight:bold; color: #e1e1e1; padding: 5px; 15px; 5px; 15px;}
+.zag{font-style: inherit; padding: 5px; margin: 2px;background:  #166dc8; border: 1px solid #0b4ea3;}
+.footer{background: url(images/end.gif) no-repeat left top; height: 48px; text-align: center; }
+.top_title{font-size: 15px; color: #5f8fd0; font-weight:bold}
+.phpcode{
+text-align: left;
+margin: 0px;
+padding: 5px;
+color: #999;
+background: #f6f6f6;
+border-top: 1px dotted #999;
+border-bottom: 1px dotted #999;
+font-size: 12px;
+}
